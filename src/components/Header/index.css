@@ -1,0 +1,9 @@
+/* Write your CSS here */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(64, 167, 167);
+  background-size: cover;
+  width: 100vw;
+}
