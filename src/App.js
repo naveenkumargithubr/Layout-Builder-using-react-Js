@@ -9,16 +9,22 @@ import Layout from './components/Layout'
 import './App.css'
 
 class App extends Component {
-  state = {showContent: true, showLeftNavbar: true, showRightNavbar: true}
+  state = {showContent: true, showLeftNavbar: true, showRightNavbar: true} // step 3 when state is updated render method is called
 
+  // step 4 this methos is updating the state comparing to prevState
+  
   onToggleShowContent = () => {
     this.setState(prevState => ({showContent: !prevState.showContent}))
   }
 
+   // step 4 this methos is updating the state comparing to prevState
+  
   onToggleShowLeftNavbar = () => {
     this.setState(prevState => ({showLeftNavbar: !prevState.showLeftNavbar}))
   }
 
+   // step 4 this methos is updating the state comparing to prevState
+  
   onToggleShowRightNavbar = () => {
     this.setState(prevState => ({showRightNavbar: !prevState.showRightNavbar}))
   }
@@ -32,16 +38,16 @@ class App extends Component {
           showContent,
           showLeftNavbar,
           showRightNavbar,
-          onToggleShowContent: this.onToggleShowContent,
-          onToggleShowLeftNavbar: this.onToggleShowLeftNavbar,
-          onToggleShowRightNavbar: this.onToggleShowRightNavbar,
+          onToggleShowContent: this.onToggleShowContent, // step3 this method is called onToggleShowContent 
+          onToggleShowLeftNavbar: this.onToggleShowLeftNavbar, // step3 this method is called onToggleShowLeftNavbar
+          onToggleShowRightNavbar: this.onToggleShowRightNavbar, // step3 this method is called onToggleShowRightNavbar
         }}
       >
         <div className="layout-main-container">
-          <ConfigurationController />
+          <ConfigurationController /> 
           <Layout />
         </div>
-      </ConfigurationContext.Provider>
+      </ConfigurationContext.Provider>  // step5 finally Provider is update the latest value and based on the this value context is updated
     )
   }
 }
